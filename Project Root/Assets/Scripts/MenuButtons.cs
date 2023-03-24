@@ -13,12 +13,12 @@ public class MenuButtons : MonoBehaviour
     IEnumerator WaitForStartAnim()
     {
         yield return new WaitForSecondsRealtime(0.5f);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void OpenSettings()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void Back()
