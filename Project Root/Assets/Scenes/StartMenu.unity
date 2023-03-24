@@ -260,7 +260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: -656}
+  m_AnchoredPosition: {x: -2.4953, y: 477.95386}
   m_SizeDelta: {x: 828.0278, y: 222.4222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485875812
@@ -284,7 +284,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4fccd1858853bd94e805c7fe40ead219, type: 3}
+    m_Font: {fileID: 12800000, guid: 2be136e6e8d01484aa8b614bbfc5677d, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Tap to start
+  m_Text: 'Touch to start
 
 '
 --- !u!222 &485875813
@@ -422,8 +422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: 791}
-  m_SizeDelta: {x: 828.0278, y: 222.4222}
+  m_AnchoredPosition: {x: -0.0010796, y: 648}
+  m_SizeDelta: {x: 1080, y: 216.33}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &933638541
 MonoBehaviour:
@@ -447,7 +447,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4fccd1858853bd94e805c7fe40ead219, type: 3}
-    m_FontSize: 100
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -506,8 +506,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.4954, y: 100}
-  m_SizeDelta: {x: 974.358, y: 981.132}
+  m_AnchoredPosition: {x: -2.4953, y: -37}
+  m_SizeDelta: {x: 742.8563, y: 743.538}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223898381
 MonoBehaviour:
