@@ -296,7 +296,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press to start
+  m_Text: 'Tap to start
 
 '
 --- !u!222 &485875813
@@ -339,8 +339,8 @@ RectTransform:
   m_Children:
   - {fileID: 933638540}
   - {fileID: 485875811}
-  - {fileID: 1223898380}
   - {fileID: 1802544175}
+  - {fileID: 1223898380}
   m_Father: {fileID: 438213345}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 1802544178}
   - component: {fileID: 1802544177}
   - component: {fileID: 1802544176}
+  - component: {fileID: 1802544179}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -869,7 +870,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1802544177}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1802544179}
+        m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
+        m_MethodName: OpenSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1802544177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,6 +921,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802544174}
   m_CullTransparentMesh: 1
+--- !u!114 &1802544179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802544174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439e1c8cb7af40241a23dd6a2dcd7773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1961841720
 GameObject:
   m_ObjectHideFlags: 0
