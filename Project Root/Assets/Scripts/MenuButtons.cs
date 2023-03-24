@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour
+public class MenuButtons : MonoBehaviour
 {
     public void StartGame()
     {
@@ -12,7 +12,12 @@ public class StartButton : MonoBehaviour
 
     IEnumerator WaitForStartAnim()
     {
-        yield return new WaitForSecondsRealtime(1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSecondsRealtime(0.5f);
+        SceneManager.LoadScene(2);
+    }
+
+    public void OpenSettings()
+    {
+        SceneManager.LoadScene(1);
     }
 }
