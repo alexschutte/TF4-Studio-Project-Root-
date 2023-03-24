@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
 public class SplashScreen : MonoBehaviour
 {
-    public GameObject[] Logos;
+    public Image TF4Logo;
+    public Image UnityLogo;
     IEnumerator Wait()
     {
         yield return new WaitForSecondsRealtime(3f);
@@ -16,14 +16,15 @@ public class SplashScreen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*Logos = GameObject.FindGameObjectsWithTag("Logo");
-        foreach (GameObject logo in Logos)
+        // changes alpha value of logos
+        if (TF4Logo.material.color.a < 246)
         {
-            Image image = logo.GetComponent<Image>();
-            Color newColour = image.material.color;
-            newColour.a += 10;
-            image.material.color = newColour;
-        }*/
+            Color newColour = TF4Logo.color;
+            newColour.a += 0.001f;
+            TF4Logo.color = newColour;
+            UnityLogo.color = newColour;
+        }
+
         StartCoroutine(Wait());
     }
 }
