@@ -8,12 +8,19 @@ public class clickMove : MonoBehaviour
     [SerializeField]private Transform player;
     Vector2 clickPos;
     bool moving;
-    
+
+
+    private void Update()
+    {
+        OnMouseEnter();
+    }
+
 
     void OnMouseEnter()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("click");
             clickPos = transform.position;
             moving = true;
         }
