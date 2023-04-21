@@ -34,7 +34,7 @@ public class playerMovement : MonoBehaviour
             transform.Translate(1f, 0, 0);
         }
 
-        if (Input.GetMouseButtonDown(0))
+       /* if (Input.GetMouseButtonDown(0))
         {
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving = true;
@@ -49,7 +49,7 @@ public class playerMovement : MonoBehaviour
         else
         {
             moving = false;
-        }
+        }*/
 
     }
 
