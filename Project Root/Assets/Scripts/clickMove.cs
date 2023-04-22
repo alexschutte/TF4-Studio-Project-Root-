@@ -18,7 +18,7 @@ public class clickMove : MonoBehaviour
             GameObject PlayerCharacter = GameObject.FindGameObjectWithTag("Player");
             global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
 
-            if (global.AP > 0)
+            if (global.moving && global.AP > 0)
             {
                 if (tileNo == global.playerCurrentPos - 1 || tileNo == global.playerCurrentPos + 1 || tileNo == global.playerCurrentPos - 4 || tileNo == global.playerCurrentPos + 4)
                 {
@@ -27,7 +27,8 @@ public class clickMove : MonoBehaviour
                     PlayerCharacter.transform.position = new Vector3(clickPos.x, clickPos.y, -2);
                     global.playerCurrentPos = tileNo;
                     global.AP--;
-                } 
+                    global.APCounter.text = "AP: " + global.AP;
+                }
             }
               
         }
