@@ -6,16 +6,20 @@ public class clickMove : MonoBehaviour
 {
     public float speed = 5f;
     [SerializeField] private int tileNo;
-    Vector3 clickPos = new Vector3(-1.5f, -0.28f, -1f);
+    private Vector3 clickPos = new Vector3(-1.5f, -0.28f, -1f);
     private Globals global;
+    private GameObject PlayerCharacter;
+
+    private void Awake()
+    {
+        PlayerCharacter = GameObject.FindGameObjectWithTag("Player");
+        global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
+    }
 
     void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject PlayerCharacter = GameObject.FindGameObjectWithTag("Player");
-            global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
-
             if (global.moving && global.AP > 0)
             {
                 if (tileNo == global.playerCurrentPos - 1 || tileNo == global.playerCurrentPos + 1 || tileNo == global.playerCurrentPos - 4 || tileNo == global.playerCurrentPos + 4)
@@ -27,7 +31,6 @@ public class clickMove : MonoBehaviour
                     global.APCounter.text = "AP: " + global.AP;
                 }
             }
-              
         }
     }
 }
