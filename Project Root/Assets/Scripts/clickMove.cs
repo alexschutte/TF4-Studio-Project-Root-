@@ -6,9 +6,10 @@ public class clickMove : MonoBehaviour
 {
     public float speed = 5f;
     [SerializeField] private int tileNo;
-    private Vector3 clickPos = new Vector3(-1.5f, -0.28f, -1f);
+    private Vector3 clickPos = new Vector3(-1.5f, -0.26f, -1f);
     private Globals global;
     private GameObject PlayerCharacter;
+
 
     private void Awake()
     {
