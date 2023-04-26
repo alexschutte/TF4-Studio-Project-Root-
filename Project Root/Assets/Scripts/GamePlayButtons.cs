@@ -24,13 +24,13 @@ public class GamePlayButtons : MonoBehaviour
         if (global.moving)
         {
             global.moving = false;
-            GetComponentInChildren<Text>().text = "FIRE";
+            GetComponentInChildren<Text>().text = "JUMP";
 
         }
         else
         {
             global.moving = true;
-            GetComponentInChildren<Text>().text = "JUMP";
+            GetComponentInChildren<Text>().text = "FIRE";
         }
     }
     public void Back()

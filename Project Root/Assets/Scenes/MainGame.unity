@@ -2354,7 +2354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: JUMP
+  m_Text: FIRE
 --- !u!222 &674649376
 CanvasRenderer:
   m_ObjectHideFlags: 0
