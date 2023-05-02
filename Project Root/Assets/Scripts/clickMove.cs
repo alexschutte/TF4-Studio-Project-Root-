@@ -19,17 +19,20 @@ public class clickMove : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (global.playerTurn)
         {
-            if (global.moving && global.AP > 0)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (tileNo == global.playerCurrentPos - 1 || tileNo == global.playerCurrentPos + 1 || tileNo == global.playerCurrentPos - 4 || tileNo == global.playerCurrentPos + 4)
+                if (global.moving && global.AP > 0)
                 {
-                    clickPos = transform.position;
-                    PlayerCharacter.transform.position = new Vector3(clickPos.x, clickPos.y, -2);
-                    global.playerCurrentPos = tileNo;
-                    global.AP--;
-                    global.APCounter.text = "AP: " + global.AP;
+                    if (tileNo == global.playerCurrentPos - 1 || tileNo == global.playerCurrentPos + 1 || tileNo == global.playerCurrentPos - 4 || tileNo == global.playerCurrentPos + 4)
+                    {
+                        clickPos = transform.position;
+                        PlayerCharacter.transform.position = new Vector3(clickPos.x, clickPos.y, -2);
+                        global.playerCurrentPos = tileNo;
+                        global.AP--;
+                        global.APCounter.text = "AP: " + global.AP;
+                    }
                 }
             }
         }

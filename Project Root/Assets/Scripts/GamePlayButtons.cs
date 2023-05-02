@@ -17,6 +17,9 @@ public class GamePlayButtons : MonoBehaviour
     {
         global.AP++;
         global.APCounter.text = "AP: " + global.AP;
+        global.turn++;
+        global.turnCounter.text = "Turn: " + global.turn;
+        global.playerTurn = false;
     }
 
     public void MoveFire()

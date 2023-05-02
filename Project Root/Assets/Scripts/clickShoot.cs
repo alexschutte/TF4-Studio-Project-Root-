@@ -53,30 +53,34 @@ public class clickShoot : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (global.playerTurn)
         {
-            if (!global.moving && global.AP > 0)
+            if (Input.GetMouseButtonDown(0))
             {
-                if (transform.localPosition.y > 0)
+                if (!global.moving && global.AP > 0)
                 {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    if (transform.localPosition.y > 0)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
+                    }
+                    else if (transform.localPosition.y < 0)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
+                    }
+                    else if (transform.localPosition.x > 0)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
+                    }
+                    else if (transform.localPosition.x < 0)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
+                    }
+                    laser.GetComponent<Animator>().Play("laserShoot");
+                    global.AP--;
+                    global.APCounter.text = "AP: " + global.AP;
                 }
-                else if (transform.localPosition.y < 0)
-                {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
-                }
-                else if (transform.localPosition.x > 0)
-                {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
-                }
-                else if (transform.localPosition.x < 0)
-                {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
-                }
-                laser.GetComponent<Animator>().Play("laserShoot");
-                global.AP--;
-                global.APCounter.text = "AP: " + global.AP;
             }
         }
+        
     }
 }
