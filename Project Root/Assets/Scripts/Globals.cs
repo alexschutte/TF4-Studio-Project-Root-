@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class Globals : MonoBehaviour
 {
     public int playerCurrentPos;
-    public int enemyCurrentPos;
+    public int enemy1CurrentPos;
     public int AP;
     public int turn;
-    public int enemyAP;
+    public int enemy1AP;
     [SerializeField] public Text APCounter;
     [SerializeField] public Text turnCounter;
     public bool moving;
@@ -24,8 +24,8 @@ public class Globals : MonoBehaviour
         APCounter.text = "AP: " + AP.ToString();
         turnCounter.text = "Turn " + turn.ToString();
         moving = true;
-        enemyCurrentPos = 4;
-        enemyAP = 1;
+        enemy1CurrentPos = 4;
+        enemy1AP = 1;
         playerTurn = true;
         shotCheck = false;
     }
