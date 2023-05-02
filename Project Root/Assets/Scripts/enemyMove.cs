@@ -35,22 +35,22 @@ public class enemyMove : MonoBehaviour
             {
                 if (enemyCharacter.transform.localPosition.y == playerCharacter.transform.localPosition.y && enemyCharacter.transform.localPosition.x > playerCharacter.transform.localPosition.x)
                 {
-                    print("pew left");
+                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
                     laser.GetComponent<Animator>().Play("laserShoot");
                 }
                 else if (enemyCharacter.transform.localPosition.y == playerCharacter.transform.localPosition.y && enemyCharacter.transform.localPosition.x < playerCharacter.transform.localPosition.x)
                 {
-                    print("pew right");
+                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
                     laser.GetComponent<Animator>().Play("laserShoot");
                 }
                 else if (enemyCharacter.transform.localPosition.x == playerCharacter.transform.localPosition.x && enemyCharacter.transform.localPosition.y > playerCharacter.transform.localPosition.y)
                 {
-                    print("pew down");
+                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
                     laser.GetComponent<Animator>().Play("laserShoot");
                 }
                 else if (enemyCharacter.transform.localPosition.x == playerCharacter.transform.localPosition.x && enemyCharacter.transform.localPosition.y < playerCharacter.transform.localPosition.y)
                 {
-                    print("pew up");
+                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
                     laser.GetComponent<Animator>().Play("laserShoot");
                 }
                 else
