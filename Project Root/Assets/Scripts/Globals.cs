@@ -25,7 +25,7 @@ public class Globals : MonoBehaviour
         turnCounter.text = "Turn " + turn.ToString();
         moving = true;
         enemyCurrentPos = 4;
-        enemyAP = 5;
+        enemyAP = 1;
         playerTurn = true;
         shotCheck = false;
     }
