@@ -14,8 +14,8 @@ public class clickShoot : MonoBehaviour
     private void Awake()
     {
         global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
-        laserPivot = GameObject.Find("LaserPivot");
-        laser = GameObject.Find("Laser");
+        laserPivot = GameObject.Find("LaserPivotP");
+        laser = GameObject.Find("LaserP");
         tile1 = GameObject.Find("Tile (1)");
         tile20 = GameObject.Find("Tile (20)");
     }
