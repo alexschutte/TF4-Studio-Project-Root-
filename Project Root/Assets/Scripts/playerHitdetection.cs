@@ -24,27 +24,33 @@ public class playerHitdetection : MonoBehaviour
             if (PlayerCharacter.transform.localPosition.y == enemyCharacter.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter.transform.localPosition.x)
             {
                 Destroy(enemyCharacter);
-                global.win = true;
+                StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
             else if (PlayerCharacter.transform.localPosition.y == enemyCharacter.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter.transform.localPosition.x)
             {
                 Destroy(enemyCharacter);
-                global.win = true;
+                StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter.transform.localPosition.y)
             {
                 Destroy(enemyCharacter);
-                global.win = true;
+                StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter.transform.localPosition.y)
             {
                 Destroy(enemyCharacter);
-                global.win = true;
+                StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
         }
+    }
+
+    IEnumerator WaitForLaser()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        global.win = true;
     }
 }
