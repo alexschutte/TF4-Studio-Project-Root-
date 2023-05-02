@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class enemyMove : MonoBehaviour
 {
@@ -113,6 +114,7 @@ public class enemyMove : MonoBehaviour
             }
             global.playerTurn = true;
             global.enemyAP++;
+            GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemyAP.ToString();
         }
     }
 }
