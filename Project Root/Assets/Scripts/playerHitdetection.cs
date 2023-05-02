@@ -45,6 +45,10 @@ public class playerHitdetection : MonoBehaviour
                 global.win = true;
                 global.shotCheck = false;
             }
+            else
+            {
+                global.shotCheck = false;
+            }
         }
     }
 }
