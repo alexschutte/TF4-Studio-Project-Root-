@@ -38,21 +38,25 @@ public class enemyMove : MonoBehaviour
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    Destroy(playerCharacter);
                 }
                 else if (enemyCharacter.transform.localPosition.y == playerCharacter.transform.localPosition.y && enemyCharacter.transform.localPosition.x < playerCharacter.transform.localPosition.x)
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    Destroy(playerCharacter);
                 }
                 else if (enemyCharacter.transform.localPosition.x == playerCharacter.transform.localPosition.x && enemyCharacter.transform.localPosition.y > playerCharacter.transform.localPosition.y)
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    Destroy(playerCharacter);
                 }
                 else if (enemyCharacter.transform.localPosition.x == playerCharacter.transform.localPosition.x && enemyCharacter.transform.localPosition.y < playerCharacter.transform.localPosition.y)
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    Destroy(playerCharacter);
                 }
                 else
                 {

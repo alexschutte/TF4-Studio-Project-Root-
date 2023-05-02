@@ -14,6 +14,7 @@ public class Globals : MonoBehaviour
     [SerializeField] public Text turnCounter;
     public bool moving;
     public bool playerTurn;
+    public bool shotCheck;
 
     private void Awake()
     {
@@ -26,5 +27,6 @@ public class Globals : MonoBehaviour
         enemyCurrentPos = 4;
         enemyAP = 5;
         playerTurn = true;
+        shotCheck = false;
     }
 }
