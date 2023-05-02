@@ -70,7 +70,7 @@ public class enemyMove : MonoBehaviour
                         else
                         {
                             enemyCharacter.transform.position = new Vector3(enemyCharacter.transform.position.x, enemyCharacter.transform.position.y + 1, enemyCharacter.transform.position.z);
-                            global.enemyCurrentPos = global.enemyCurrentPos + 4;
+                            global.enemyCurrentPos = global.enemyCurrentPos - 4;
                             global.enemyAP--;
                         }
                     }
