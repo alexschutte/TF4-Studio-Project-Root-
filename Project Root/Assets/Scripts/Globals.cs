@@ -15,6 +15,11 @@ public class Globals : MonoBehaviour
     public bool moving;
     public bool playerTurn;
     public bool shotCheck;
+    public bool lose;
+    public bool win;
+    private GameObject popup;
+    private GameObject btnNext;
+    private GameObject txtLose;
 
     private void Awake()
     {
@@ -28,5 +33,30 @@ public class Globals : MonoBehaviour
         enemy1AP = 1;
         playerTurn = true;
         shotCheck = false;
+        win = false;
+        lose = false;
+        popup = GameObject.Find("Popup");
+        btnNext = GameObject.Find("btnNext");
+        txtLose = GameObject.Find("txtLose");
+    }
+
+    private void Update()
+    {
+        if (win)
+        {
+            popup.SetActive(true);
+            btnNext.SetActive(true);
+            txtLose.SetActive(false);
+        }
+        else if (lose)
+        {
+            popup.SetActive(true);
+            btnNext.SetActive(false);
+            txtLose.SetActive(true);
+        }
+        else
+        {
+            popup.SetActive(false);
+        }
     }
 }

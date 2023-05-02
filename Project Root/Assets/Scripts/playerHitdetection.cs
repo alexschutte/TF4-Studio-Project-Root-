@@ -24,21 +24,25 @@ public class playerHitdetection : MonoBehaviour
             if (PlayerCharacter.transform.localPosition.y == enemyCharacter.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter.transform.localPosition.x)
             {
                 Destroy(enemyCharacter);
+                global.win = true;
                 global.shotCheck = false;
             }
             else if (PlayerCharacter.transform.localPosition.y == enemyCharacter.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter.transform.localPosition.x)
             {
                 Destroy(enemyCharacter);
+                global.win = true;
                 global.shotCheck = false;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter.transform.localPosition.y)
             {
                 Destroy(enemyCharacter);
+                global.win = true;
                 global.shotCheck = false;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter.transform.localPosition.y)
             {
                 Destroy(enemyCharacter);
+                global.win = true;
                 global.shotCheck = false;
             }
         }
