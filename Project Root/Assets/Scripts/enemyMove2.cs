@@ -25,7 +25,7 @@ public class enemyMove2 : MonoBehaviour
         ranNum = Random.Range(1, 5);
     }
 
-    void Update()
+    public void turn()
     {
         if (!global.playerTurn)
         {
@@ -82,7 +82,7 @@ public class enemyMove2 : MonoBehaviour
         NewRandomNumber();
         if (ranNum == 1)
         {
-            if (global.enemy2CurrentPos < 5)
+            if (global.enemy2CurrentPos < 5 || global.enemy2CurrentPos - 4 == global.enemy1CurrentPos)
             {
                 Move();
             }
@@ -94,7 +94,7 @@ public class enemyMove2 : MonoBehaviour
         }
         else if (ranNum == 2)
         {
-            if (global.enemy2CurrentPos == 4 || global.enemy2CurrentPos == 8 || global.enemy2CurrentPos == 12 || global.enemy2CurrentPos == 16 || global.enemy2CurrentPos == 20)
+            if (global.enemy2CurrentPos == 4 || global.enemy2CurrentPos == 8 || global.enemy2CurrentPos == 12 || global.enemy2CurrentPos == 16 || global.enemy2CurrentPos == 20 || global.enemy2CurrentPos + 1 == global.enemy1CurrentPos)
             {
                 Move();
             }
@@ -106,7 +106,7 @@ public class enemyMove2 : MonoBehaviour
         }
         else if (ranNum == 3)
         {
-            if (global.enemy2CurrentPos > 16)
+            if (global.enemy2CurrentPos > 16 || global.enemy2CurrentPos + 4 == global.enemy1CurrentPos)
             {
                 Move();
             }
@@ -118,7 +118,7 @@ public class enemyMove2 : MonoBehaviour
         }
         else if (ranNum == 4)
         {
-            if (global.enemy2CurrentPos == 1 || global.enemy2CurrentPos == 5 || global.enemy2CurrentPos == 9 || global.enemy2CurrentPos == 13 || global.enemy2CurrentPos == 17)
+            if (global.enemy2CurrentPos == 1 || global.enemy2CurrentPos == 5 || global.enemy2CurrentPos == 9 || global.enemy2CurrentPos == 13 || global.enemy2CurrentPos == 17 || global.enemy2CurrentPos - 1 == global.enemy1CurrentPos)
             {
                 Move();
             }

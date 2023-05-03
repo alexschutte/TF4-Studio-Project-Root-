@@ -7,6 +7,7 @@ public class enemyMove1 : MonoBehaviour
 {
 
     private Globals global;
+    private enemyMove2 enemy2;
     private GameObject enemyCharacter;
     private GameObject playerCharacter;
     private GameObject laserPivot;
@@ -17,6 +18,7 @@ public class enemyMove1 : MonoBehaviour
     {
         playerCharacter = GameObject.FindGameObjectWithTag("Player");
         global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
+        enemy2 = GameObject.Find("Enemy2").GetComponent<enemyMove2>();
         laserPivot = GameObject.Find("LaserPivotE1");
         laser = GameObject.Find("LaserE1");
         NewRandomNumber();
@@ -74,6 +76,7 @@ public class enemyMove1 : MonoBehaviour
                     Move();
                 }
                 global.enemy1AP--;
+                enemy2.turn();
             }
             global.playerTurn = true;
             global.enemy1AP = 1;
