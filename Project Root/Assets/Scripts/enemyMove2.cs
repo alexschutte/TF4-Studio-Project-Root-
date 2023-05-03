@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class enemyMove : MonoBehaviour
+public class enemyMove2 : MonoBehaviour
 {
-
     private Globals global;
-    private GameObject enemyCharacter;
     private GameObject playerCharacter;
     private GameObject laserPivot;
     private GameObject laser;
@@ -17,8 +15,8 @@ public class enemyMove : MonoBehaviour
     {
         playerCharacter = GameObject.FindGameObjectWithTag("Player");
         global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
-        laserPivot = GameObject.Find("LaserPivotE1");
-        laser = GameObject.Find("LaserE1");
+        laserPivot = GameObject.Find("LaserPivotE2");
+        laser = GameObject.Find("LaserE2");
         NewRandomNumber();
     }
 
@@ -31,7 +29,7 @@ public class enemyMove : MonoBehaviour
     {
         if (!global.playerTurn)
         {
-            while (global.enemy1AP > 0)
+            while (global.enemy2AP > 0)
             {
                 if (transform.localPosition.y == playerCharacter.transform.localPosition.y && transform.localPosition.x > playerCharacter.transform.localPosition.x)
                 {
@@ -73,11 +71,10 @@ public class enemyMove : MonoBehaviour
                 {
                     Move();
                 }
-                global.enemy1AP--;
+                global.enemy2AP--;
             }
-            global.playerTurn = true;
-            global.enemy1AP = 1;
-            GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemy1AP.ToString();
+            global.enemy2AP = 1;
+            GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemy2AP.ToString();
         }
     }
     private void Move()
@@ -85,50 +82,50 @@ public class enemyMove : MonoBehaviour
         NewRandomNumber();
         if (ranNum == 1)
         {
-            if (global.enemy1CurrentPos < 5)
+            if (global.enemy2CurrentPos < 5)
             {
                 Move();
             }
             else
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-                global.enemy1CurrentPos = global.enemy1CurrentPos - 4;
+                global.enemy2CurrentPos = global.enemy2CurrentPos - 4;
             }
         }
         else if (ranNum == 2)
         {
-            if (global.enemy1CurrentPos == 4 || global.enemy1CurrentPos == 8 || global.enemy1CurrentPos == 12 || global.enemy1CurrentPos == 16 || global.enemy1CurrentPos == 20)
+            if (global.enemy2CurrentPos == 4 || global.enemy2CurrentPos == 8 || global.enemy2CurrentPos == 12 || global.enemy2CurrentPos == 16 || global.enemy2CurrentPos == 20)
             {
                 Move();
             }
             else
             {
                 transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
-                global.enemy1CurrentPos = global.enemy1CurrentPos + 1;
+                global.enemy2CurrentPos = global.enemy2CurrentPos + 1;
             }
         }
         else if (ranNum == 3)
         {
-            if (global.enemy1CurrentPos > 16)
+            if (global.enemy2CurrentPos > 16)
             {
                 Move();
             }
             else
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
-                global.enemy1CurrentPos = global.enemy1CurrentPos + 4;
+                global.enemy2CurrentPos = global.enemy2CurrentPos + 4;
             }
         }
         else if (ranNum == 4)
         {
-            if (global.enemy1CurrentPos == 1 || global.enemy1CurrentPos == 5 || global.enemy1CurrentPos == 9 || global.enemy1CurrentPos == 13 || global.enemy1CurrentPos == 17)
+            if (global.enemy2CurrentPos == 1 || global.enemy2CurrentPos == 5 || global.enemy2CurrentPos == 9 || global.enemy2CurrentPos == 13 || global.enemy2CurrentPos == 17)
             {
                 Move();
             }
             else
             {
                 transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-                global.enemy1CurrentPos = global.enemy1CurrentPos - 1;
+                global.enemy2CurrentPos = global.enemy2CurrentPos - 1;
             }
         }
     }

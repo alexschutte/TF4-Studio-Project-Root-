@@ -6,12 +6,12 @@ public class playerHitdetection : MonoBehaviour
 {
     private Globals global;
     private GameObject PlayerCharacter;
-    private GameObject enemyCharacter;
+    private GameObject enemyCharacter1;
 
     private void Awake()
     {
         PlayerCharacter = GameObject.FindGameObjectWithTag("Player");
-        enemyCharacter = GameObject.FindGameObjectWithTag("enemie");
+        enemyCharacter1 = GameObject.Find("Enemy1");
         global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
     }
 
@@ -21,31 +21,31 @@ public class playerHitdetection : MonoBehaviour
     {
         if(global.shotCheck)
         {
-            if (PlayerCharacter.transform.localPosition.y == enemyCharacter.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter.transform.localPosition.x)
+            if (PlayerCharacter.transform.localPosition.y == enemyCharacter1.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter1.transform.localPosition.x)
             {
-                Destroy(enemyCharacter);
-                enemyCharacter.GetComponent<AudioSource>().Play();
+                Destroy(enemyCharacter1);
+                enemyCharacter1.GetComponent<AudioSource>().Play();
                 StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
-            else if (PlayerCharacter.transform.localPosition.y == enemyCharacter.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter.transform.localPosition.x)
+            else if (PlayerCharacter.transform.localPosition.y == enemyCharacter1.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter1.transform.localPosition.x)
             {
-                Destroy(enemyCharacter);
-                enemyCharacter.GetComponent<AudioSource>().Play();
+                Destroy(enemyCharacter1);
+                enemyCharacter1.GetComponent<AudioSource>().Play();
                 StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
-            else if (PlayerCharacter.transform.localPosition.x == enemyCharacter.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter.transform.localPosition.y)
+            else if (PlayerCharacter.transform.localPosition.x == enemyCharacter1.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter1.transform.localPosition.y)
             {
-                Destroy(enemyCharacter);
-                enemyCharacter.GetComponent<AudioSource>().Play();
+                Destroy(enemyCharacter1);
+                enemyCharacter1.GetComponent<AudioSource>().Play();
                 StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }
-            else if (PlayerCharacter.transform.localPosition.x == enemyCharacter.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter.transform.localPosition.y)
+            else if (PlayerCharacter.transform.localPosition.x == enemyCharacter1.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter1.transform.localPosition.y)
             {
-                Destroy(enemyCharacter);
-                enemyCharacter.GetComponent<AudioSource>().Play();
+                Destroy(enemyCharacter1);
+                enemyCharacter1.GetComponent<AudioSource>().Play();
                 StartCoroutine(WaitForLaser());
                 global.shotCheck = false;
             }

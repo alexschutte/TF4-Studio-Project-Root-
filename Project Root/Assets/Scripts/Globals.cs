@@ -7,9 +7,11 @@ public class Globals : MonoBehaviour
 {
     public int playerCurrentPos;
     public int enemy1CurrentPos;
+    public int enemy2CurrentPos;
     public int AP;
     public int turn;
     public int enemy1AP;
+    public int enemy2AP;
     [SerializeField] public Text APCounter;
     [SerializeField] public Text turnCounter;
     public bool moving;
@@ -31,6 +33,8 @@ public class Globals : MonoBehaviour
         moving = true;
         enemy1CurrentPos = 4;
         enemy1AP = 1;
+        enemy2CurrentPos = 2;
+        enemy2AP = 1;
         playerTurn = true;
         shotCheck = false;
         win = false;
