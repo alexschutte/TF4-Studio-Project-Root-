@@ -27,7 +27,7 @@ public class Globals : MonoBehaviour
     private void Awake()
     {
         playerCurrentPos = 17;
-        AP = 5;
+        AP = 3;
         turn = 1;
         APCounter.text = "AP: " + AP.ToString();
         turnCounter.text = "Turn " + turn.ToString();
