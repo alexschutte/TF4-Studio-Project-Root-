@@ -12,6 +12,7 @@ public class Globals : MonoBehaviour
     public int turn;
     public int enemy1AP;
     public int enemy2AP;
+    public int enemiesLeft;
     [SerializeField] public Text APCounter;
     [SerializeField] public Text turnCounter;
     public bool moving;
@@ -35,6 +36,7 @@ public class Globals : MonoBehaviour
         enemy1AP = 1;
         enemy2CurrentPos = 2;
         enemy2AP = 1;
+        enemiesLeft = 2;
         playerTurn = true;
         shotCheck = false;
         win = false;
