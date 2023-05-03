@@ -16,6 +16,8 @@ public class Globals : MonoBehaviour
     [SerializeField] public Text APCounter;
     [SerializeField] public Text turnCounter;
     public bool moving;
+    public enum direction { up, left, down, right };
+    public direction shotDirection;
     public bool playerTurn;
     public bool shotCheck;
     public bool lose;
@@ -32,6 +34,7 @@ public class Globals : MonoBehaviour
         APCounter.text = "AP: " + AP.ToString();
         turnCounter.text = "Turn " + turn.ToString();
         moving = true;
+        shotDirection = direction.up;
         enemy1CurrentPos = 4;
         enemy1AP = 1;
         enemy2CurrentPos = 2;
