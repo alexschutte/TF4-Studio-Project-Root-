@@ -37,6 +37,8 @@ public class enemyMove : MonoBehaviour
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    laser.GetComponent<AudioSource>().Play();
+                    laserPivot.GetComponent<AudioSource>().Play();
                     StartCoroutine(WaitForLaser());
                     Destroy(playerCharacter);
                 }
@@ -44,6 +46,8 @@ public class enemyMove : MonoBehaviour
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    laser.GetComponent<AudioSource>().Play();
+                    laserPivot.GetComponent<AudioSource>().Play();
                     StartCoroutine(WaitForLaser());
                     Destroy(playerCharacter);
                 }
@@ -51,6 +55,8 @@ public class enemyMove : MonoBehaviour
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    laser.GetComponent<AudioSource>().Play();
+                    laserPivot.GetComponent<AudioSource>().Play();
                     StartCoroutine(WaitForLaser());
                     Destroy(playerCharacter);
                 }
@@ -58,6 +64,8 @@ public class enemyMove : MonoBehaviour
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
                     laser.GetComponent<Animator>().Play("laserShoot");
+                    laser.GetComponent<AudioSource>().Play();
+                    laserPivot.GetComponent<AudioSource>().Play();
                     StartCoroutine(WaitForLaser());
                     Destroy(playerCharacter);
                 }

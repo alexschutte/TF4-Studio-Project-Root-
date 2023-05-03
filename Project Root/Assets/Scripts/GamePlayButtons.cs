@@ -20,6 +20,7 @@ public class GamePlayButtons : MonoBehaviour
         global.turn++;
         global.turnCounter.text = "TURN: " + global.turn;
         global.playerTurn = false;
+        GetComponent<AudioSource>().Play();
     }
 
     public void MoveFire()

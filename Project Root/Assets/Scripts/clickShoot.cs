@@ -62,21 +62,25 @@ public class clickShoot : MonoBehaviour
                     if (transform.localPosition.y > 0)
                     {
                         laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        laser.GetComponent<AudioSource>().Play();
                         global.shotCheck = true;
                     }
                     else if (transform.localPosition.y < 0)
                     {
                         laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
+                        laser.GetComponent<AudioSource>().Play();
                         global.shotCheck = true;
                     }
                     else if (transform.localPosition.x > 0)
                     {
                         laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
+                        laser.GetComponent<AudioSource>().Play();
                         global.shotCheck = true;
                     }
                     else if (transform.localPosition.x < 0)
                     {
                         laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
+                        laser.GetComponent<AudioSource>().Play();
                         global.shotCheck = true;
                     }
                     laser.GetComponent<Animator>().Play("laserShoot");

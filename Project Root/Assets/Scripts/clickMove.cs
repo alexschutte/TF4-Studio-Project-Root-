@@ -30,6 +30,7 @@ public class clickMove : MonoBehaviour
                         clickPos = transform.position;
                         PlayerCharacter.transform.position = new Vector3(clickPos.x, clickPos.y, -2);
                         global.playerCurrentPos = tileNo;
+                        PlayerCharacter.GetComponent<AudioSource>().Play();
                         global.AP--;
                         global.APCounter.text = "AP: " + global.AP;
                     }
