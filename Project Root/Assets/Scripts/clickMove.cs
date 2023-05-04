@@ -33,12 +33,16 @@ public class clickMove : MonoBehaviour
                 {
                     if (tileNo == global.playerCurrentPos - 1 || tileNo == global.playerCurrentPos + 1 || tileNo == global.playerCurrentPos - 4 || tileNo == global.playerCurrentPos + 4)
                     {
-                        clickPos = transform.position;
-                        PlayerCharacter.transform.position = new Vector3(clickPos.x, clickPos.y, -2);
-                        global.playerCurrentPos = tileNo;
-                        PlayerCharacter.GetComponent<AudioSource>().Play();
-                        global.AP--;
-                        global.APCounter.text = "AP: " + global.AP;
+                        if (tileNo != global.enemy1CurrentPos && tileNo != global.enemy2CurrentPos)
+                        {
+                            clickPos = transform.position;
+                            PlayerCharacter.transform.position = new Vector3(clickPos.x, clickPos.y, -2);
+                            global.playerCurrentPos = tileNo;
+                            PlayerCharacter.GetComponent<AudioSource>().Play();
+                            global.AP--;
+                            global.APCounter.text = "AP: " + global.AP;
+                        }
+                        
                     }
                 }
             }
@@ -54,7 +58,7 @@ public class clickMove : MonoBehaviour
             deadTile = true;
         }
 
-        //if enemy moves onto a dead tile it calls for a different dirrection 
+        //if enemy moves onto a dead tile it calls for a different direction 
         if(deadTile)
         {
             if(enemy.transform.position.x == transform.position.x && enemy.transform.position.y == transform.position.y)

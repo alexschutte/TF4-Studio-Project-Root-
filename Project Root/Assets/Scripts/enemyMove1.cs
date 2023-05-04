@@ -7,7 +7,6 @@ public class enemyMove1 : MonoBehaviour
 {
     private Globals global;
     private enemyMove2 enemy2;
-    private GameObject enemyCharacter;
     private GameObject playerCharacter;
     private GameObject laserPivot;
     private GameObject laser;
