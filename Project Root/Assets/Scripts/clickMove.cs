@@ -22,6 +22,7 @@ public class clickMove : MonoBehaviour
         deadTile = false;
     }
 
+    //checks for player input and moves player to correct tile taking away 1 ap
     void OnMouseOver()
     {
         if (global.playerTurn)
@@ -46,12 +47,14 @@ public class clickMove : MonoBehaviour
 
     void Update()
     {
+        //if enemy dies on tile it becomes inactive
         if(tileNo == global.deathCheck1 || tileNo == global.deathCheck2)
         {
             GetComponent<BoxCollider2D>().enabled = false;
             deadTile = true;
         }
 
+        //if enemy moves onto a dead tile it calls for a different dirrection 
         if(deadTile)
         {
             if(enemy.transform.position.x == transform.position.x && enemy.transform.position.y == transform.position.y)

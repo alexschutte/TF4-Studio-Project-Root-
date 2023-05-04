@@ -51,6 +51,7 @@ public class clickShoot : MonoBehaviour
         }
     }
 
+    //checks for player input then playes the corresponding laser animation and sound
     void OnMouseOver()
     {
         if (global.playerTurn)

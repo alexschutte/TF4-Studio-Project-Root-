@@ -31,6 +31,7 @@ public class enemyMove2 : MonoBehaviour
         {
             while (global.enemy2AP > 0)
             {
+                //checking is enemy can shoot player. picks dirrection for visual laser
                 if (transform.localPosition.y == playerCharacter.transform.localPosition.y && transform.localPosition.x > playerCharacter.transform.localPosition.x)
                 {
                     laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
@@ -77,6 +78,7 @@ public class enemyMove2 : MonoBehaviour
             global.enemy2AP = 1;
             GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemy2AP.ToString();
         }
+        //when lastMove is true this statement checks which dirrection the enemy has tried to moved then moves it back and chooses a different dirrection. used for dead squares
         if(global.lastMove2)
         {
             if(global.lastStore2 == 1)
@@ -105,6 +107,7 @@ public class enemyMove2 : MonoBehaviour
             }
         }
     }
+    //enemy movement decisions
     private void Move()
     {
         NewRandomNumber();
@@ -166,6 +169,7 @@ public class enemyMove2 : MonoBehaviour
         }
     }
 
+    //waits for laser animation to finish before moving to lose screen
     IEnumerator WaitForLaser()
     {
         yield return new WaitForSecondsRealtime(0.5f);

@@ -27,6 +27,7 @@ public class playerHitdetection : MonoBehaviour
     {
         if (global.shotCheck)
         {
+            //checking if player can shoot enemy, shoots laser, kills enemy
             if (PlayerCharacter.transform.localPosition.y == enemyCharacter1.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter1.transform.localPosition.x && global.shotDirection == Globals.direction.left)
             {
                 enemyPos = enemyCharacter1.transform.position;
@@ -139,6 +140,7 @@ public class playerHitdetection : MonoBehaviour
         }
     }
 
+    //waits for laser animation to finish before win screen
     IEnumerator WaitForLaser()
     {
         yield return new WaitForSecondsRealtime(0.5f);
