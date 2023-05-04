@@ -42,6 +42,7 @@ public class playerHitdetection : MonoBehaviour
                 global.playerTurn = true;
                 global.death1 = true;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else if (PlayerCharacter.transform.localPosition.y == enemyCharacter1.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter1.transform.localPosition.x && global.shotDirection == Globals.direction.right)
             {
@@ -57,6 +58,7 @@ public class playerHitdetection : MonoBehaviour
                 global.playerTurn = true;
                 global.death1 = true;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter1.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter1.transform.localPosition.y && global.shotDirection == Globals.direction.down)
             {
@@ -72,6 +74,7 @@ public class playerHitdetection : MonoBehaviour
                 global.playerTurn = true;
                 global.death1 = true;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter1.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter1.transform.localPosition.y && global.shotDirection == Globals.direction.up)
             {
@@ -87,6 +90,7 @@ public class playerHitdetection : MonoBehaviour
                 global.playerTurn = true;
                 global.death1 = true;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             if (PlayerCharacter.transform.localPosition.y == enemyCharacter2.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter2.transform.localPosition.x && global.shotDirection == Globals.direction.left)
             {
@@ -99,6 +103,7 @@ public class playerHitdetection : MonoBehaviour
                 global.shotCheck = false;
                 global.deathCheck2 = global.enemy2CurrentPos;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else if (PlayerCharacter.transform.localPosition.y == enemyCharacter2.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter2.transform.localPosition.x && global.shotDirection == Globals.direction.right)
             {
@@ -111,6 +116,7 @@ public class playerHitdetection : MonoBehaviour
                 global.shotCheck = false;
                 global.deathCheck2 = global.enemy2CurrentPos;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter2.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter2.transform.localPosition.y && global.shotDirection == Globals.direction.down)
             {
@@ -123,6 +129,7 @@ public class playerHitdetection : MonoBehaviour
                 global.shotCheck = false;
                 global.deathCheck2 = global.enemy2CurrentPos;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter2.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter2.transform.localPosition.y && global.shotDirection == Globals.direction.up)
             {
@@ -135,6 +142,7 @@ public class playerHitdetection : MonoBehaviour
                 global.shotCheck = false;
                 global.deathCheck2 = global.enemy2CurrentPos;
                 global.AP++;
+                global.APCounter.text = "AP: " + global.AP;
             }
             else
             {
