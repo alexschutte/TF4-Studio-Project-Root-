@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 21042517}
   m_Layer: 0
   m_Name: Tile (11)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -223,6 +223,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 11
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &21042518
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -742,6 +746,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 1
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!1 &114018286
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1557,7 @@ GameObject:
   - component: {fileID: 229938029}
   m_Layer: 0
   m_Name: Tile (12)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,6 +1643,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 12
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &229938030
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1755,7 +1767,7 @@ GameObject:
   - component: {fileID: 264631693}
   m_Layer: 0
   m_Name: Tile (10)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1841,6 +1853,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 10
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &264631694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1881,7 +1897,7 @@ GameObject:
   - component: {fileID: 298948308}
   m_Layer: 0
   m_Name: Tile (2)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1967,6 +1983,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 2
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &298948309
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2508,6 +2528,8 @@ MonoBehaviour:
   enemiesLeft: 0
   deathCheck1: 0
   deathCheck2: 0
+  lastStore: 0
+  lastStore2: 0
   APCounter: {fileID: 848423487}
   turnCounter: {fileID: 251391159}
   moving: 0
@@ -2517,6 +2539,8 @@ MonoBehaviour:
   lose: 0
   win: 0
   death1: 0
+  lastMove: 0
+  lastMove2: 0
 --- !u!82 &452798183
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2711,7 +2735,7 @@ GameObject:
   - component: {fileID: 551762115}
   m_Layer: 0
   m_Name: Tile (3)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2797,6 +2821,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 3
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &551762116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3520,7 +3548,7 @@ GameObject:
   - component: {fileID: 874203896}
   m_Layer: 0
   m_Name: Tile (14)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3606,6 +3634,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 14
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &874203897
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3646,7 +3678,7 @@ GameObject:
   - component: {fileID: 983945997}
   m_Layer: 0
   m_Name: Tile (6)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3758,6 +3790,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 6
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!1 &1035145252
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,7 +3971,7 @@ GameObject:
   - component: {fileID: 1099160894}
   m_Layer: 0
   m_Name: Tile (8)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4021,6 +4057,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 8
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1099160895
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4061,7 +4101,7 @@ GameObject:
   - component: {fileID: 1155624292}
   m_Layer: 0
   m_Name: Tile (17)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4147,6 +4187,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 17
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1155624293
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4267,7 +4311,7 @@ GameObject:
   - component: {fileID: 1214360291}
   m_Layer: 0
   m_Name: Tile (7)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4353,6 +4397,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 7
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1214360292
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4393,7 +4441,7 @@ GameObject:
   - component: {fileID: 1231887304}
   m_Layer: 0
   m_Name: Tile (19)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4479,6 +4527,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 19
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1231887305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5101,7 +5153,7 @@ GameObject:
   - component: {fileID: 1511820158}
   m_Layer: 0
   m_Name: Tile (20)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5187,6 +5239,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 20
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1511820159
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5227,7 +5283,7 @@ GameObject:
   - component: {fileID: 1527443043}
   m_Layer: 0
   m_Name: Tile (16)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5313,6 +5369,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 16
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1527443044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5489,6 +5549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dead1: {fileID: 2022320969}
   dead2: {fileID: 1465072330}
+  text: {fileID: 87728431}
 --- !u!82 &1527632558
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5874,7 +5935,7 @@ GameObject:
   - component: {fileID: 1634163304}
   m_Layer: 0
   m_Name: Tile (9)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5960,6 +6021,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 9
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1634163305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6229,7 +6294,7 @@ GameObject:
   - component: {fileID: 1640630567}
   m_Layer: 0
   m_Name: Tile (5)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6341,6 +6406,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 5
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!1 &1668368256
 GameObject:
   m_ObjectHideFlags: 0
@@ -6900,7 +6969,7 @@ GameObject:
   - component: {fileID: 1772698531}
   m_Layer: 0
   m_Name: Tile (18)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6986,6 +7055,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 18
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &1772698532
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8005,7 +8078,7 @@ GameObject:
   - component: {fileID: 2048418264}
   m_Layer: 0
   m_Name: Tile (15)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8091,6 +8164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 15
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &2048418265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8131,7 +8208,7 @@ GameObject:
   - component: {fileID: 2069805725}
   m_Layer: 0
   m_Name: Tile (13)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8217,6 +8294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 13
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &2069805726
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8481,7 +8562,7 @@ GameObject:
   - component: {fileID: 2136360983}
   m_Layer: 0
   m_Name: Tile (4)
-  m_TagString: Untagged
+  m_TagString: Tile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8567,6 +8648,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   tileNo: 4
+  enemy: {fileID: 2037876698}
+  enemy2: {fileID: 1989498665}
+  dead1: {fileID: 2022320969}
+  dead2: {fileID: 1465072330}
 --- !u!61 &2136360984
 BoxCollider2D:
   m_ObjectHideFlags: 0

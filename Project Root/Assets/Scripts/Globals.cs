@@ -15,6 +15,8 @@ public class Globals : MonoBehaviour
     public int enemiesLeft;
     public int deathCheck1;
     public int deathCheck2;
+    public int lastStore;
+    public int lastStore2;
     [SerializeField] public Text APCounter;
     [SerializeField] public Text turnCounter;
     public bool moving;
@@ -25,6 +27,8 @@ public class Globals : MonoBehaviour
     public bool lose;
     public bool win;
     public bool death1;
+    public bool lastMove;
+    public bool lastMove2;
     private GameObject popup;
     private GameObject btnNext;
     private GameObject txtLose;
@@ -53,6 +57,10 @@ public class Globals : MonoBehaviour
         deathCheck1 = 0;
         deathCheck2 = 0;
         death1 = false;
+        lastMove = false;
+        lastStore = 0;
+        lastMove2 = false;
+        lastStore2 = 0;
     }
 
     private void Update()

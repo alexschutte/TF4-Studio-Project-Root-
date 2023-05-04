@@ -77,6 +77,33 @@ public class enemyMove2 : MonoBehaviour
             global.enemy2AP = 1;
             GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemy2AP.ToString();
         }
+        if(global.lastMove2)
+        {
+            if(global.lastStore2 == 1)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
+                global.enemy1CurrentPos = global.enemy1CurrentPos + 4;
+                Move();
+            }
+            else if(global.lastStore2 == 2)
+            {
+                transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
+                global.enemy1CurrentPos = global.enemy1CurrentPos - 1;
+                Move();
+            }
+            else if(global.lastStore2 == 3)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+                global.enemy1CurrentPos = global.enemy1CurrentPos - 4;
+                Move();
+            }
+            else if(global.lastStore2 == 4)
+            {
+                transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
+                global.enemy1CurrentPos = global.enemy1CurrentPos + 1;
+                Move();
+            }
+        }
     }
     private void Move()
     {
@@ -91,6 +118,8 @@ public class enemyMove2 : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
                 global.enemy2CurrentPos = global.enemy2CurrentPos - 4;
+                global.lastStore2 = 1;
+                global.lastMove2 = false;
             }
         }
         else if (ranNum == 2)
@@ -103,6 +132,8 @@ public class enemyMove2 : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
                 global.enemy2CurrentPos = global.enemy2CurrentPos + 1;
+                global.lastStore2 = 1;
+                global.lastMove2 = false;
             }
         }
         else if (ranNum == 3)
@@ -115,6 +146,8 @@ public class enemyMove2 : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z);
                 global.enemy2CurrentPos = global.enemy2CurrentPos + 4;
+                global.lastStore2 = 1;
+                global.lastMove2 = false;
             }
         }
         else if (ranNum == 4)
@@ -127,6 +160,8 @@ public class enemyMove2 : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
                 global.enemy2CurrentPos = global.enemy2CurrentPos - 1;
+                global.lastStore2 = 1;
+                global.lastMove2 = false;
             }
         }
     }

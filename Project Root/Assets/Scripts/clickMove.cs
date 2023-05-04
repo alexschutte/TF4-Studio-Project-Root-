@@ -6,15 +6,20 @@ public class clickMove : MonoBehaviour
 {
     public float speed = 5f;
     [SerializeField] private int tileNo;
+    [SerializeField] private GameObject enemy;
+    [SerializeField] private GameObject enemy2;
+    [SerializeField] private GameObject dead1;
+    [SerializeField] private GameObject dead2;
     private Vector3 clickPos = new Vector3(-1.5f, -0.26f, -1f);
     private Globals global;
     private GameObject PlayerCharacter;
-
+    private bool deadTile;
 
     private void Awake()
     {
         PlayerCharacter = GameObject.FindGameObjectWithTag("Player");
         global = GameObject.FindGameObjectWithTag("GameController").GetComponent<Globals>();
+        deadTile = false;
     }
 
     void OnMouseOver()
@@ -44,6 +49,19 @@ public class clickMove : MonoBehaviour
         if(tileNo == global.deathCheck1 || tileNo == global.deathCheck2)
         {
             GetComponent<BoxCollider2D>().enabled = false;
+            deadTile = true;
+        }
+
+        if(deadTile)
+        {
+            if(enemy.transform.position.x == transform.position.x && enemy.transform.position.y == transform.position.y)
+            {
+                global.lastMove = true;
+            }
+            else if(enemy2.transform.position.x == transform.position.x && enemy2.transform.position.y == transform.position.y)
+            {
+                global.lastMove2 = true;
+            }
         }
     }
 }

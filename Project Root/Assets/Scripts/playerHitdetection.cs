@@ -11,6 +11,7 @@ public class playerHitdetection : MonoBehaviour
     private Vector3 enemyPos = new Vector3(-1.5f, -0.26f, -1f);
     [SerializeField]private GameObject dead1;
     [SerializeField]private GameObject dead2;
+    [SerializeField]private GameObject text;
 
     private void Awake()
     {
@@ -33,6 +34,7 @@ public class playerHitdetection : MonoBehaviour
                 dead1.GetComponent<SpriteRenderer>().enabled = true;
                 enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
+                Destroy(text);
                 global.enemiesLeft--;
                 global.shotCheck = false;
                 global.deathCheck1 = global.enemy1CurrentPos;
@@ -46,6 +48,7 @@ public class playerHitdetection : MonoBehaviour
                 dead1.GetComponent<SpriteRenderer>().enabled = true;
                 enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
+                Destroy(text);
                 global.enemiesLeft--;
                 global.shotCheck = false;
                 global.deathCheck1 = global.enemy1CurrentPos;
@@ -59,6 +62,7 @@ public class playerHitdetection : MonoBehaviour
                 dead1.GetComponent<SpriteRenderer>().enabled = true;
                 enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
+                Destroy(text);
                 global.enemiesLeft--;
                 global.shotCheck = false;
                 global.deathCheck1 = global.enemy1CurrentPos;
@@ -72,6 +76,7 @@ public class playerHitdetection : MonoBehaviour
                 dead1.GetComponent<SpriteRenderer>().enabled = true;
                 enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
+                Destroy(text);
                 global.enemiesLeft--;
                 global.shotCheck = false;
                 global.deathCheck1 = global.enemy1CurrentPos;
