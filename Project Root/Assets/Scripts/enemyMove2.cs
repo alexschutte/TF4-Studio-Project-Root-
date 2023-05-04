@@ -70,6 +70,7 @@ public class enemyMove2 : MonoBehaviour
                 else
                 {
                     Move();
+                    global.playerTurn = true;
                 }
                 global.enemy2AP--;
             }

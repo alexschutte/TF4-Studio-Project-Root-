@@ -13,6 +13,8 @@ public class Globals : MonoBehaviour
     public int enemy1AP;
     public int enemy2AP;
     public int enemiesLeft;
+    public int deathCheck1;
+    public int deathCheck2;
     [SerializeField] public Text APCounter;
     [SerializeField] public Text turnCounter;
     public bool moving;
@@ -22,6 +24,7 @@ public class Globals : MonoBehaviour
     public bool shotCheck;
     public bool lose;
     public bool win;
+    public bool death1;
     private GameObject popup;
     private GameObject btnNext;
     private GameObject txtLose;
@@ -47,6 +50,9 @@ public class Globals : MonoBehaviour
         popup = GameObject.Find("Popup");
         btnNext = GameObject.Find("btnNext");
         txtLose = GameObject.Find("txtLose");
+        deathCheck1 = 0;
+        deathCheck2 = 0;
+        death1 = false;
     }
 
     private void Update()

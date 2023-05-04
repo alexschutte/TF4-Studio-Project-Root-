@@ -38,4 +38,12 @@ public class clickMove : MonoBehaviour
             }
         }
     }
+
+    void Update()
+    {
+        if(tileNo == global.deathCheck1 || tileNo == global.deathCheck2)
+        {
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
 }

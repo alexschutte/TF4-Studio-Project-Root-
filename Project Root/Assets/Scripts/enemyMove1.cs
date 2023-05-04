@@ -31,56 +31,64 @@ public class enemyMove1 : MonoBehaviour
 
     void Update()
     {
-        if (!global.playerTurn)
+        if(!global.death1)
         {
-            while (global.enemy1AP > 0)
+            if (!global.playerTurn)
             {
-                if (transform.localPosition.y == playerCharacter.transform.localPosition.y && transform.localPosition.x > playerCharacter.transform.localPosition.x)
+                while (global.enemy1AP > 0)
                 {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
-                    laser.GetComponent<Animator>().Play("laserShoot");
-                    laser.GetComponent<AudioSource>().Play();
-                    laserPivot.GetComponent<AudioSource>().Play();
-                    StartCoroutine(WaitForLaser());
-                    Destroy(playerCharacter);
+                    if (transform.localPosition.y == playerCharacter.transform.localPosition.y && transform.localPosition.x > playerCharacter.transform.localPosition.x)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, 90);
+                        laser.GetComponent<Animator>().Play("laserShoot");
+                        laser.GetComponent<AudioSource>().Play();
+                        laserPivot.GetComponent<AudioSource>().Play();
+                        StartCoroutine(WaitForLaser());
+                        Destroy(playerCharacter);
+                    }
+                    else if (transform.localPosition.y == playerCharacter.transform.localPosition.y && transform.localPosition.x < playerCharacter.transform.localPosition.x)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
+                        laser.GetComponent<Animator>().Play("laserShoot");
+                        laser.GetComponent<AudioSource>().Play();
+                        laserPivot.GetComponent<AudioSource>().Play();
+                        StartCoroutine(WaitForLaser());
+                        Destroy(playerCharacter);
+                    }
+                    else if (transform.localPosition.x == playerCharacter.transform.localPosition.x && transform.localPosition.y > playerCharacter.transform.localPosition.y)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
+                        laser.GetComponent<Animator>().Play("laserShoot");
+                        laser.GetComponent<AudioSource>().Play();
+                        laserPivot.GetComponent<AudioSource>().Play();
+                        StartCoroutine(WaitForLaser());
+                        Destroy(playerCharacter);
+                    }
+                    else if (transform.localPosition.x == playerCharacter.transform.localPosition.x && transform.localPosition.y < playerCharacter.transform.localPosition.y)
+                    {
+                        laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
+                        laser.GetComponent<Animator>().Play("laserShoot");
+                        laser.GetComponent<AudioSource>().Play();
+                        laserPivot.GetComponent<AudioSource>().Play();
+                        StartCoroutine(WaitForLaser());
+                        Destroy(playerCharacter);
+                    } 
+                    else
+                    {
+                        Move();
+                    }
+                    global.enemy1AP--;
+                    enemy2.turn();
                 }
-                else if (transform.localPosition.y == playerCharacter.transform.localPosition.y && transform.localPosition.x < playerCharacter.transform.localPosition.x)
-                {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, -90);
-                    laser.GetComponent<Animator>().Play("laserShoot");
-                    laser.GetComponent<AudioSource>().Play();
-                    laserPivot.GetComponent<AudioSource>().Play();
-                    StartCoroutine(WaitForLaser());
-                    Destroy(playerCharacter);
-                }
-                else if (transform.localPosition.x == playerCharacter.transform.localPosition.x && transform.localPosition.y > playerCharacter.transform.localPosition.y)
-                {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 180);
-                    laser.GetComponent<Animator>().Play("laserShoot");
-                    laser.GetComponent<AudioSource>().Play();
-                    laserPivot.GetComponent<AudioSource>().Play();
-                    StartCoroutine(WaitForLaser());
-                    Destroy(playerCharacter);
-                }
-                else if (transform.localPosition.x == playerCharacter.transform.localPosition.x && transform.localPosition.y < playerCharacter.transform.localPosition.y)
-                {
-                    laserPivot.transform.rotation = Quaternion.Euler(0, 0, 0);
-                    laser.GetComponent<Animator>().Play("laserShoot");
-                    laser.GetComponent<AudioSource>().Play();
-                    laserPivot.GetComponent<AudioSource>().Play();
-                    StartCoroutine(WaitForLaser());
-                    Destroy(playerCharacter);
-                }
-                else
-                {
-                    Move();
-                }
-                global.enemy1AP--;
-                enemy2.turn();
+                global.playerTurn = true;
+                global.enemy1AP = 1;
+                GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemy1AP.ToString();
             }
-            global.playerTurn = true;
-            global.enemy1AP = 1;
-            GameObject.Find("APCounterE1").GetComponent<TextMeshPro>().text = global.enemy1AP.ToString();
+        }
+        
+        else if(global.death1)
+        {
+            enemy2.turn();
         }
     }
     private void Move()

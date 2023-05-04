@@ -8,6 +8,9 @@ public class playerHitdetection : MonoBehaviour
     private GameObject PlayerCharacter;
     private GameObject enemyCharacter1;
     private GameObject enemyCharacter2;
+    private Vector3 enemyPos = new Vector3(-1.5f, -0.26f, -1f);
+    [SerializeField]private GameObject dead1;
+    [SerializeField]private GameObject dead2;
 
     private void Awake()
     {
@@ -25,63 +28,104 @@ public class playerHitdetection : MonoBehaviour
         {
             if (PlayerCharacter.transform.localPosition.y == enemyCharacter1.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter1.transform.localPosition.x && global.shotDirection == Globals.direction.left)
             {
-                Destroy(enemyCharacter1);
+                enemyPos = enemyCharacter1.transform.position;
+                dead1.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead1.GetComponent<SpriteRenderer>().enabled = true;
+                enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck1 = global.enemy1CurrentPos;
+                global.playerTurn = true;
+                global.death1 = true;
             }
             else if (PlayerCharacter.transform.localPosition.y == enemyCharacter1.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter1.transform.localPosition.x && global.shotDirection == Globals.direction.right)
             {
-                Destroy(enemyCharacter1);
+                enemyPos = enemyCharacter1.transform.position;
+                dead1.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead1.GetComponent<SpriteRenderer>().enabled = true;
+                enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck1 = global.enemy1CurrentPos;
+                global.playerTurn = true;
+                global.death1 = true;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter1.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter1.transform.localPosition.y && global.shotDirection == Globals.direction.down)
             {
-                Destroy(enemyCharacter1);
+                enemyPos = enemyCharacter1.transform.position;
+                dead1.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead1.GetComponent<SpriteRenderer>().enabled = true;
+                enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck1 = global.enemy1CurrentPos;
+                global.playerTurn = true;
+                global.death1 = true;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter1.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter1.transform.localPosition.y && global.shotDirection == Globals.direction.up)
             {
-                Destroy(enemyCharacter1);
+                enemyPos = enemyCharacter1.transform.position;
+                dead1.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead1.GetComponent<SpriteRenderer>().enabled = true;
+                enemyCharacter1.GetComponent<SpriteRenderer>().enabled = false;
                 enemyCharacter1.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck1 = global.enemy1CurrentPos;
+                global.playerTurn = true;
+                global.death1 = true;
             }
             if (PlayerCharacter.transform.localPosition.y == enemyCharacter2.transform.localPosition.y && PlayerCharacter.transform.localPosition.x > enemyCharacter2.transform.localPosition.x && global.shotDirection == Globals.direction.left)
             {
+                enemyPos = enemyCharacter2.transform.position;
+                dead2.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead2.GetComponent<SpriteRenderer>().enabled = true;
                 Destroy(enemyCharacter2);
                 enemyCharacter2.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck2 = global.enemy2CurrentPos;
             }
             else if (PlayerCharacter.transform.localPosition.y == enemyCharacter2.transform.localPosition.y && PlayerCharacter.transform.localPosition.x < enemyCharacter2.transform.localPosition.x && global.shotDirection == Globals.direction.right)
             {
+                enemyPos = enemyCharacter2.transform.position;
+                dead2.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead2.GetComponent<SpriteRenderer>().enabled = true;
                 Destroy(enemyCharacter2);
                 enemyCharacter2.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck2 = global.enemy2CurrentPos;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter2.transform.localPosition.x && PlayerCharacter.transform.localPosition.y > enemyCharacter2.transform.localPosition.y && global.shotDirection == Globals.direction.down)
             {
+                enemyPos = enemyCharacter2.transform.position;
+                dead2.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead2.GetComponent<SpriteRenderer>().enabled = true;
                 Destroy(enemyCharacter2);
                 enemyCharacter2.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck2 = global.enemy2CurrentPos;
             }
             else if (PlayerCharacter.transform.localPosition.x == enemyCharacter2.transform.localPosition.x && PlayerCharacter.transform.localPosition.y < enemyCharacter2.transform.localPosition.y && global.shotDirection == Globals.direction.up)
             {
+                enemyPos = enemyCharacter2.transform.position;
+                dead2.transform.position = new Vector3(enemyPos.x, enemyPos.y, -2);
+                dead2.GetComponent<SpriteRenderer>().enabled = true;
                 Destroy(enemyCharacter2);
                 enemyCharacter2.GetComponent<AudioSource>().Play();
                 global.enemiesLeft--;
                 global.shotCheck = false;
+                global.deathCheck2 = global.enemy2CurrentPos;
             }
             else
             {
                 global.shotCheck = false;
+                global.playerTurn = true;
             }
         }
         if (global.enemiesLeft == 0)
