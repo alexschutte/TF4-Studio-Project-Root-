@@ -1,10 +1,15 @@
 # TF4 Studio (Project Root)
 
 Group Members:
+
 Jaden Lawrence
+
 Alexander Schutte
+
 Nicholas Cornwell
+
 Tariqe Rylance
+
 Joal Roynon
 
 Presentation Link:
